@@ -8,7 +8,7 @@
 #   hil-test:
 #     extends: .siliconrig-hil
 #     variables:
-#       SRIG_BOARD: esp32-s3
+#       SRIG_BOARD: esp32-s3   # or stm32-h753, stm32-f446, rp2350
 #       SRIG_FIRMWARE: build/firmware.bin
 #     script:
 #       - pytest tests/hil/ -v
