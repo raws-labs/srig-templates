@@ -2,7 +2,7 @@
 #
 # Include in your .gitlab-ci.yml:
 #   include:
-#     - remote: 'https://raw.githubusercontent.com/siliconrig/srig-integrations/main/templates/gitlab-ci.yml'
+#     - remote: 'https://raw.githubusercontent.com/raws-labs/srig-templates/main/gitlab-ci.yml'
 #
 # Then extend the template in your job:
 #   hil-test:
@@ -23,8 +23,8 @@
         aarch64) ARCH="arm64" ;;
         armv7l)  ARCH="armv7" ;;
       esac
-      TAG=$(curl -s https://api.github.com/repos/siliconrig/srig-cli/releases/latest | jq -r .tag_name)
-      curl -sL "https://github.com/siliconrig/srig-cli/releases/download/${TAG}/srig-${OS}-${ARCH}" -o /usr/local/bin/srig
+      TAG=$(curl -fsS https://api.github.com/repos/raws-labs/srig-cli/releases/latest | jq -r .tag_name)
+      curl -fsSL "https://github.com/raws-labs/srig-cli/releases/download/${TAG}/srig_${TAG#v}_${OS}_${ARCH}.tar.gz" | tar xz -C /usr/local/bin srig
       chmod +x /usr/local/bin/srig
       srig version
 
