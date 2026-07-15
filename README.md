@@ -8,7 +8,7 @@ Include the template in your `.gitlab-ci.yml`:
 
 ```yaml
 include:
-  - remote: 'https://raw.githubusercontent.com/siliconrig/templates/main/gitlab-ci.yml'
+  - remote: 'https://raw.githubusercontent.com/raws-labs/srig-templates/main/gitlab-ci.yml'
 
 hil-test:
   extends: .siliconrig-hil
