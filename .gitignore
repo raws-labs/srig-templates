@@ -1,0 +1,4 @@
+# Ignore dotfiles and dotfolders (local tooling state); keep the tracked ones.
+.*
+!.gitignore
+!.github/
