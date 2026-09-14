@@ -1,6 +1,6 @@
 # srig-templates
 
-CI/CD templates for [siliconrig](https://siliconrig.dev) hardware-in-the-loop testing.
+GitLab CI templates for [SiliconRig](https://siliconrig.dev) hardware-in-the-loop testing.
 
 ## GitLab CI
 
@@ -24,8 +24,8 @@ hil-test:
 | Template | Description |
 |---|---|
 | `.siliconrig-install` | Installs `srig-cli` binary |
-| `.siliconrig-hil` | Full HIL workflow — session, flash, serial capture, cleanup |
-| `.siliconrig-flash` | Flash-only workflow — session, flash, cleanup |
+| `.siliconrig-hil` | Full HIL workflow: session, flash, serial capture, cleanup |
+| `.siliconrig-flash` | Flash-only workflow: session, flash, cleanup |
 
 ### Variables
 
